@@ -12,16 +12,16 @@ class AquaParkVisitorAgeClassifier {
         if (age <= 13) {
             return "Young frog";
         }
-        if (age > 13 && age <= 18) {
+        if (age <= 18) {
             return "Teen";
         }
-        if (age > 18 && age <= 30) {
+        if (age <= 30) {
             return "Happy";
         }
-        if (age > 30 && age <= 65) {
+        if (age <= 65) {
             return "Adult";
         }
-        if (age > 65 && age <= 80) {
+        if (age <= 80) {
             return "Senior";
         }
         return "Jedi";

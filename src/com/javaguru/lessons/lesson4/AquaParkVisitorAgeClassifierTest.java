@@ -5,11 +5,12 @@ class AquaParkVisitorAgeClassifierTest {
     public static void main(String[] args) {
         AquaParkVisitorAgeClassifierTest testRunner = new AquaParkVisitorAgeClassifierTest();
         testRunner.shouldReturnTadpoleWhenAge1();
-//        testRunner.shouldReturnTadpoleWhenAge7();
-//        testRunner.shouldReturnYoungFrogWhenAge13();
-//        testRunner.shouldReturnTeenWhenAge18();
-//        testRunner.shouldReturnHappyWhenAge30();
-//        testRunner.shouldReturnIncorrectAgeWhenAgeNegative();
+        testRunner.shouldReturnTadpoleWhenAge7();
+        testRunner.shouldReturnYoungFrogWhenAge13();
+        testRunner.shouldReturnTeenWhenAge18();
+        testRunner.shouldReturnHappyWhenAge30();
+        testRunner.shouldReturnIncorrectAgeWhenAgeNegative();
+        testRunner.shouldReturnJediWhenAge100();
     }
 
     void shouldReturnTadpoleWhenAge1() {
@@ -99,6 +100,20 @@ class AquaParkVisitorAgeClassifierTest {
             System.out.println("shouldReturnIncorrectAgeWhenAgeNegative : SUCCESS");
         } else {
             System.out.println("shouldReturnIncorrectAgeWhenAgeNegative : FAILED");
+        }
+    }
+    void shouldReturnJediWhenAge100() {
+        AquaParkVisitorAgeClassifier victim = new AquaParkVisitorAgeClassifier();
+
+        int age = 100;
+        String expectedResult = "Jedi";
+
+        String actualResult = victim.classify(age);
+
+        if (expectedResult.equals(actualResult)) {
+            System.out.println("shouldReturnJediWhenAge100 : SUCCESS");
+        } else {
+            System.out.println("shouldReturnJediWhenAge100 : FAILED");
         }
     }
 }
